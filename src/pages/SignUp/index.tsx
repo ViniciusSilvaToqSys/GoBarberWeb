@@ -43,7 +43,7 @@ const SignUp: React.FC = () => {
 
         await schema.validate(data, { abortEarly: false });
 
-        const response = api.post('/users', data);
+        await api.post('/users', data);
 
         history.push('/');
 
